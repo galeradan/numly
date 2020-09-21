@@ -12,6 +12,7 @@ function App() {
   const [randomIndex, setRandomIndex] = React.useState()
   const [pickLength, setPickLength] = React.useState('')
   const [isGenerating, setIsGenerating] = React.useState(false)
+  const [isDefault, setIsDefault] = React.useState(false)
   const timingRef = useRef();
   
 
@@ -30,10 +31,11 @@ function App() {
       array[currentIndex] = array[randomIndex];
       array[randomIndex] = temporaryValue;
     }
-    
     setNum(array)
-    setIsGenerating(true)
-    
+
+    if(!isGenerating){
+      setIsGenerating(true)
+    }
   }
   
 
@@ -42,10 +44,7 @@ function App() {
     for(let x = min; x <= max; x++){
       numCopy.push(x)
     }
-
     Shuffle(numCopy)
-    // setNum(numCopy)
-    // setIsGenerating(true)
   }
 
   const Reset =()=>{
@@ -67,20 +66,37 @@ function App() {
       timingRef.current = timing
       return () => clearInterval(timing);
     }
+    // eslint-disable-next-line
   },[isGenerating])
 
-  
   React.useEffect(()=>{
     if(counter!==0){
+
+      if(isDefault){
+        // Shuffle always
+        Shuffle(num)
+      }else{
+        // Shuffle once and pick random numbers
         let picker = num[Math.floor(num.length * Math.random())]
         let index = num.indexOf(picker)
         setRandom(picker)
         setRandomIndex(index) 
+      }
+
       if(counter%50===0){
         let numCopy = [...num]
-        numCopy.splice(randomIndex,1)
+        if(isDefault){
+          // Pick a number when shuffling always
+          let picker = num[Math.floor(num.length * Math.random())]
+          let index = num.indexOf(picker)
+          numCopy.splice(index,1)
+          setChosen(chosen => [...chosen, picker]);
+        }else{
+          // Pick a number when Shuffling once
+          numCopy.splice(randomIndex,1)
+          setChosen(chosen => [...chosen, random])
+        }
         setNum(numCopy)
-        setChosen(chosen => [...chosen, random]);
       }
     }
     if(Number(chosen.length)===Number(pickLength)){
@@ -113,6 +129,10 @@ function App() {
               <button className="btn btn-primary" onClick={Generate} disabled={isGenerating}>Generate</button>
               <button className="btn btn-warning ml-2" onClick={Reset} disabled={!isGenerating}>Reset</button>
             </div>
+          </div>
+          <div className="form-check form-check-inline">
+            <input className="form-check-input" type="checkbox" id="inlineCheckbox1" checked={isDefault} onChange={()=>setIsDefault(!isDefault)} disabled={isGenerating}/>
+            <label className="form-check-label" htmlFor="inlineCheckbox1">Shuffle Always?</label>
           </div>
         </div>
       </div>
