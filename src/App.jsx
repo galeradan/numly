@@ -83,7 +83,7 @@ function App() {
         setRandomIndex(index) 
       }
 
-      if(counter%50===0){
+      if(counter%55===0){
         let numCopy = [...num]
         if(isDefault){
           // Pick a number when shuffling always
@@ -169,7 +169,7 @@ function App() {
           chosen.length>0 && (
             chosen.map((num)=>{
               return (
-                <div key={num} className="col-md-2">
+                <div key={num} className="col-md-2 mb-2">
                   <div className="card">
                     <h4>{num}</h4>
                   </div>
