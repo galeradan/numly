@@ -7,7 +7,7 @@ This is a random number generator with timer.
 - Set the range
 - Set how many numbers to be selected
 - Set numbers are shuffled
-- The generator will randomize every 0.2 seconds and will select a number every 10 seconds. 
+- The generator will randomize every 0.2 seconds and will select a number every 11 seconds. 
 
 ## Future Plans
 - Allow customising the speed of randomizing and when to pick a number
