@@ -13,9 +13,6 @@ about: 'For ideas or feature requests'
 ## Why
 - Share us why do we need to have this feature
 
-### Value it brings to us 
-- State here the reason why it will help us grow
-
 ### Value it brings to target user
 - State here the reason why it will help the user
 
