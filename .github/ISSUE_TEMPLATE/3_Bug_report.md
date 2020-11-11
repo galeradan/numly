@@ -1,6 +1,10 @@
 ---
-name: "🐛 Bug Report"
-about: 'Report a bug that you encountered'
+name: "\U0001F41B Bug Report"
+about: Report a bug that you encountered
+title: "[BUG]: "
+labels: 'Type: Bug'
+assignees: galeradan
+
 ---
 
 # Bug report

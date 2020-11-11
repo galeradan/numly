@@ -1,7 +1,12 @@
 ---
-name: "💡 Feature Specification"
-about: 'For spefication and tasks'
+name: "\U0001F4A1 Feature Specification"
+about: For spefication and tasks
+title: ''
+labels: ''
+assignees: ''
+
 ---
+
 # Feature Specification
 
 ## Feature
@@ -22,5 +27,3 @@ about: 'For spefication and tasks'
 
 ## Mentions
 @galeradan
-
-

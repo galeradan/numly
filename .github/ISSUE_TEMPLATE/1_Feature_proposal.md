@@ -1,7 +1,12 @@
 ---
-name: "💡 Feature Proposal"
-about: 'For ideas or feature requests'
+name: "\U0001F4A1 Feature Proposal"
+about: For ideas or feature requests
+title: ''
+labels: ''
+assignees: ''
+
 ---
+
 # Feature Proposal
 
 ## What
