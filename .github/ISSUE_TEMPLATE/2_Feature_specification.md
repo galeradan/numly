@@ -1,9 +1,9 @@
 ---
 name: "\U0001F4A1 Feature Specification"
 about: For spefication and tasks
-title: ''
-labels: ''
-assignees: ''
+title: "[FS]: "
+labels: 'Type: Specs'
+assignees: galeradan
 
 ---
 
