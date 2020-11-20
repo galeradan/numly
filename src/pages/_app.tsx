@@ -1,3 +1,5 @@
+import 'assets/global.scss'
+
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
