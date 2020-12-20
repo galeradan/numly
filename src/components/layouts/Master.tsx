@@ -1,4 +1,9 @@
-import {Home as HomeIcon} from '@material-ui/icons';
+import {
+  HomeRounded as HomeIcon,
+  ExitToAppRounded as LogoutIcon,
+  HistoryRounded as HistoryIcon,
+  ListRounded as GenerateIcon,
+} from '@material-ui/icons';
 
 const Master = ({ children }) => {
 
@@ -10,18 +15,20 @@ const Master = ({ children }) => {
         <nav className="side-nav">
           <span>Numly</span>
           <ul>
-            <li className="nav-item active">
+            <li className="nav-item">
               <HomeIcon className="icon"/>
               <span>Home</span>
             </li>
-            <li>
+            <li className="nav-item">
+              <GenerateIcon className="icon"/>
               Generate
             </li>
-            <li>
+            <li className="nav-item">
+              <HistoryIcon className="icon"/>
               History
             </li>
-            <li>
-              {/* <LogoutIcon /> */}
+            <li className="nav-item">
+              <LogoutIcon className="icon"/>
               Logout
             </li>
           </ul>

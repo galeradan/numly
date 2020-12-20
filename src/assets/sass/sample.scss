@@ -21,21 +21,23 @@ body{
                 list-style-type: none;
             }
         }
+
+        .nav-item{
+            display: flex;
+            align-items: center;
+            font-size: 18px;
+            .icon{
+                margin-right: 20px;
+            }
+        }
+        .nav-item.active{
+            color:red;
+        }
     }
     .main{
         width: 100%;
         padding: 10px;
     }
 
-    .nav-item{
-        display: flex;
-        align-items: center;
-        font-size: 18px;
-        .icon{
-            margin-right: 20px;
-        }
-    }
-    .nav-item.active{
-        color:red;
-    }
+    
 }
