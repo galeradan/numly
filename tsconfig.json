@@ -27,7 +27,7 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx", ".prettierrc.js", "next.config.js"
+    "**/*.tsx", ".prettierrc.js", "next.config.js","src/custom.d.ts"
   ],
   "exclude": [
     "node_modules"

@@ -10,6 +10,8 @@
     "start": "next start -p $PORT"
   },
   "dependencies": {
+    "@material-ui/core": "^4.11.2",
+    "@material-ui/icons": "^4.11.2",
     "next": "10.0.2",
     "react": "17.0.1",
     "react-dom": "17.0.1",
@@ -20,6 +22,7 @@
     "@types/react": "^16.9.56",
     "eslint": "^7.13.0",
     "eslint-config-airbnb-typescript-prettier": "^4.0.0",
+    "next-images": "^1.6.2",
     "prettier": "^2.1.2",
     "typescript": "^4.1.2"
   }
