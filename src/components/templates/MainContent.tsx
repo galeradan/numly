@@ -1,12 +1,12 @@
 import React from 'react'
 
-const MainContent = ({title, children}) => {
+const MainContent = ({title, children, variant}) => {
     return (
             <>
                 <div className="title">
                     {title}
                 </div>
-                <div className="content">
+                <div className={variant}>
                     {children}
                 </div>
 
