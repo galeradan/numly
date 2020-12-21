@@ -7,13 +7,36 @@
     height: 100vh;
 
     .side-nav{
-        padding: 0px 27px;
-        width: 100%;
-        max-width: 270px;
+        position: relative;
         transition: 0.3s;
+        padding: 0px 10px;
+        width: 100%;
+        max-width: 80px;
         display: flex;
         flex-direction: column;
 
+        .toggler{
+            position: absolute;
+            right: 0px;
+            top: 59px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0px 0px 5px #0000005e;
+            border-radius: 20px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+
+            svg{
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .toggler:hover{
+            color: $numly-primary;
+        }
 
         .logo{
             font-size: 26px;
@@ -21,6 +44,11 @@
             text-align: center;
             margin-top: 50px;
             margin-bottom: 70px;
+            cursor: pointer;
+        }
+
+        .logo-md{
+            display: none;
         }
         
         .nav-menu {
@@ -40,19 +68,52 @@
                 padding: 13px 16px;
                 text-decoration: none;
                 color: $numly-dark;
+
                 .icon{
-                    margin-right: 20px;
                     width: 28px;
                     height: 28px;
+                }
+
+                span{
+                    display: none;
+                    opacity: 0;
                 }
             }
             .nav-link.active{
                 color: $numly-primary;
-                box-shadow: 0px 3px 6px #00000029;
+                box-shadow: 0px 0px 20px #00000029;
             }
             .nav-link:hover{
-                box-shadow: 0px 3px 6px #00000029;
+                box-shadow: 0px 0px 20px #00000029;
                 cursor: pointer;
+            }
+        }
+    }
+
+    .side-nav.collapsed{
+        padding: 0px 10px;
+        width: 100%;
+        max-width: 250px;
+
+        .logo-sm{
+            display: none;
+        }
+
+        .logo-md{
+            display: block;
+        }
+        
+        .nav-menu {
+            .nav-link{
+                width: 100%;
+                justify-content: normal;
+                .icon{
+                    margin-right: 20px;
+                }
+                span{
+                    display: block;
+                    opacity: 1;
+                }
             }
         }
 

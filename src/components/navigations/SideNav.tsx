@@ -1,27 +1,40 @@
+import React from 'react'
 import {
     HomeRounded as HomeIcon,
     ExitToAppRounded as LogoutIcon,
     HistoryRounded as HistoryIcon,
     ListRounded as GenerateIcon,
+    ArrowForwardIosRounded as ExpandIcon,
+    ArrowBackIosRounded as MinimiseIcon,
   } from '@material-ui/icons';
 
-  import { NavLink } from "@numly/components";
+import { NavLink } from "@numly/components";
   
-  const SideNav = () => {
-  
-    const isActive = false;
-  
+    const SideNav = () => {
+        const [isToggled, setToggled] = React.useState(Boolean);
+    
+    const onToggled = () =>{
+        setToggled(!isToggled);
+    }
+
     return (
       <>
-          <nav className="side-nav">
+          <nav className={`side-nav ${isToggled ? 'collapsed' : ''}`}>
+            <span className="toggler">
+                  {isToggled
+                    ? <MinimiseIcon onClick={onToggled}/>
+                    : <ExpandIcon onClick={onToggled}/>
+                  }
+            </span>
             <div className="nav-content">
-              <p className="logo">Numly</p>
+              <p className="logo logo-md">Numly</p>
+              <p className="logo logo-sm">N</p>
               <ul className="nav-menu">
                 <li className="nav-item">
                     <NavLink href="/dashboard">
                         <a className="nav-link">
                             <HomeIcon className="icon"/>
-                            Home
+                            <span>Home</span>
                         </a>
                     </NavLink>
                 </li>
@@ -29,7 +42,7 @@ import {
                     <NavLink href="/generate">
                         <a className="nav-link">
                             <GenerateIcon className="icon"/>
-                            Generate
+                            <span>Generate</span>
                         </a>
                     </NavLink>
                 </li>
@@ -37,7 +50,7 @@ import {
                     <NavLink href="/history">
                         <a className="nav-link">
                             <HistoryIcon className="icon"/>
-                            History
+                            <span>History</span>
                         </a>
                     </NavLink>
                 </li>
@@ -45,7 +58,7 @@ import {
                     <NavLink href="/logout">
                         <a className="nav-link">
                             <LogoutIcon className="icon"/>
-                            Logout
+                            <span>Logout</span>
                         </a>
                     </NavLink>
                 </li>
