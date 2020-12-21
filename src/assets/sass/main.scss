@@ -1,0 +1,15 @@
+@import './variables';
+
+
+
+.main{
+    padding: 50px 63px 0px 63px ;
+    width: 100%;
+
+    .title{
+        font-size: 26px;
+        font-weight: $font-bold;
+        margin-bottom: 70px;
+        cursor: pointer;
+    }
+}

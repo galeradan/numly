@@ -1,10 +1,10 @@
-import { Master } from '@numly/components';
+import { Master, MainTemplate } from '@numly/components';
 
 const Generate = () => {
   return (
-    <>
-      <div>content</div>
-    </>
+    <MainTemplate title="Generate">
+        <button>Generate Now</button>
+    </MainTemplate>
   );
 };
 
