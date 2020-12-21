@@ -20,10 +20,10 @@ import { NavLink } from "@numly/components";
     return (
       <>
           <nav className={`side-nav ${isToggled ? 'collapsed' : ''}`}>
-            <span className="toggler">
+            <span className="toggler" onClick={onToggled}>
                   {isToggled
-                    ? <MinimiseIcon onClick={onToggled}/>
-                    : <ExpandIcon onClick={onToggled}/>
+                    ? <MinimiseIcon/>
+                    : <ExpandIcon/>
                   }
             </span>
             <div className="nav-content">
