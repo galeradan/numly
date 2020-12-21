@@ -29,25 +29,30 @@
             li{
                 list-style-type: none;
             }
-            .nav-item{
+            .nav-link{
                 display: flex;
                 align-items: center;
                 font-size: 18px;
                 font-weight: $font-bold;
                 height: 50px;
-                box-shadow: 0px 3px 6px #00000029;
                 margin-bottom: 14px;
                 border-radius: 10px;
                 padding: 13px 16px;
-
+                text-decoration: none;
+                color: $numly-dark;
                 .icon{
                     margin-right: 20px;
                     width: 28px;
                     height: 28px;
                 }
             }
-            .nav-item.active{
-                color:red;
+            .nav-link.active{
+                color: $numly-primary;
+                box-shadow: 0px 3px 6px #00000029;
+            }
+            .nav-link:hover{
+                box-shadow: 0px 3px 6px #00000029;
+                cursor: pointer;
             }
         }
 

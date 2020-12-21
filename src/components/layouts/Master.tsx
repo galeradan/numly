@@ -1,9 +1,4 @@
-import {
-  HomeRounded as HomeIcon,
-  ExitToAppRounded as LogoutIcon,
-  HistoryRounded as HistoryIcon,
-  ListRounded as GenerateIcon,
-} from '@material-ui/icons';
+import {SideNav} from '@numly/components';
 
 const Master = ({ children }) => {
 
@@ -12,29 +7,7 @@ const Master = ({ children }) => {
   return (
     <>
       <div className="master">
-        <nav className="side-nav">
-          <div className="nav-content">
-            <p className="logo">Numly</p>
-            <ul className="nav-menu">
-              <li className="nav-item">
-                <HomeIcon className="icon"/>
-                <span>Home</span>
-              </li>
-              <li className="nav-item">
-                <GenerateIcon className="icon"/>
-                Generate
-              </li>
-              <li className="nav-item">
-                <HistoryIcon className="icon"/>
-                History
-              </li>
-              <li className="nav-item">
-                <LogoutIcon className="icon"/>
-                Logout
-              </li>
-            </ul>
-          </div>
-        </nav>
+        <SideNav/>
         <main className="main">{children}</main>
       </div>
     </>
