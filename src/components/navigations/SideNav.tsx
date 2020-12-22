@@ -31,7 +31,7 @@ import { NavLink } from "@numly/components";
               <p className="logo logo-sm">N</p>
               <ul className="nav-menu">
                 <li className="nav-item">
-                    <NavLink href="/dashboard">
+                    <NavLink href="/home">
                         <a className="nav-link">
                             <HomeIcon className="icon"/>
                             <span>Home</span>

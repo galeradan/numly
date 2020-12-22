@@ -1,8 +1,8 @@
 import { Master, MainTemplate, Button } from '@numly/components';
 
-const Dashboard = () => {
+const Home = () => {
   return (
-    <MainTemplate title="Welcome" variant="dashboard-container">
+    <MainTemplate title="Welcome" variant="home-container">
         <div className="stat-section">
             <div className="generate card">
                 <span className="card-title">Generated</span>
@@ -22,6 +22,6 @@ const Dashboard = () => {
   );
 };
 
-Dashboard.Layout = Master;
+Home.Layout = Master;
 
-export default Dashboard;
+export default Home;
