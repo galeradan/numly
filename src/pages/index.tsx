@@ -1,10 +1,7 @@
-import { Button } from '@numly/components';
-
-export default function Home() {
+export default function Landing() {
   return (
     <>
       <p>Login</p>
-      <Button />
     </>
   );
 }

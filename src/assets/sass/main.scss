@@ -11,4 +11,10 @@
         margin-bottom: 50px;
         cursor: pointer;
     }
+
+    .container{
+        & > *{
+            margin-bottom: 25px;
+        }
+    }
 }

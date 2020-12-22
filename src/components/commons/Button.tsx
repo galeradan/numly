@@ -3,15 +3,16 @@ import React, {FunctionComponent} from 'react';
 
 type Props = {
   variant?: string
+  href?: string
   label?: String
   isLink: Boolean
 }
 
-const Button:FunctionComponent<Props> = ({variant,label,isLink}) => {
+const Button:FunctionComponent<Props> = ({variant,href,label,isLink}) => {
   return (
     <>
     { isLink
-      ? <Link href="/generate">
+      ? <Link href={href}>
           <a className={variant}>
               {label}
           </a>

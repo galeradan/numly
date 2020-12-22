@@ -6,7 +6,7 @@ const MainContent = ({title, children, variant}) => {
                 <div className="title">
                     {title}
                 </div>
-                <div className={variant}>
+                <div className={`container ${variant}`}>
                     {children}
                 </div>
 

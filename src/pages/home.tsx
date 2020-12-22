@@ -16,7 +16,7 @@ const Home = () => {
         <div className="fav-section">
             <h3 className="m-0">Favorites</h3>
             <p>You haven't added any yet, Click the button below to get started</p>
-            <Button variant="button" isLink={true} label="Check History" />
+            <Button variant="button" href="/history" isLink={true} label="Check History" />
         </div>
     </MainTemplate>
   );
