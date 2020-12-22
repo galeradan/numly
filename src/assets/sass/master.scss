@@ -9,7 +9,7 @@
     .side-nav{
         position: relative;
         transition: 0.3s;
-        padding: 0px 10px;
+        padding: 20px 10px 0px 10px;
         width: 100%;
         max-width: 80px;
         display: flex;
@@ -18,7 +18,7 @@
         .toggler{
             position: absolute;
             right: 0px;
-            top: 59px;
+            top: 29px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -42,8 +42,8 @@
             font-size: 26px;
             font-weight: $font-bold;
             text-align: center;
-            margin-top: 50px;
-            margin-bottom: 70px;
+            margin: 0px;
+            margin-bottom: 50px;
             cursor: pointer;
         }
 
@@ -91,7 +91,6 @@
     }
 
     .side-nav.collapsed{
-        padding: 0px 10px;
         width: 100%;
         max-width: 250px;
 

@@ -2,7 +2,7 @@ import { Master, MainTemplate } from '@numly/components';
 
 const Generate = () => {
   return (
-    <MainTemplate title="Generate">
+    <MainTemplate title="Generate" variant="generate-container">
         <button>Generate Now</button>
     </MainTemplate>
   );

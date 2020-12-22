@@ -1,23 +1,25 @@
 @import './variables';
 
 
-.dashboard{
-    .stat-container{
-        display: flex;
-        margin-bottom: 38px;
+.dashboard-container{
+
+    & > *{
+        margin-bottom: 25px;
     }
-    .stat-container * {
+    .stat-section{
+        display: flex;
+
+        .card{
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+    }
+    .stat-section > * {
         margin-right: 25px;
     }
-    .stat-container *:last-child {
+    .stat-section > *:last-child {
         margin-right: 0px;
-    }
-    .card{
-        width: 100%;
-        border-radius: 10px;
-        height: 148px;
-        max-width: 322px;
-        box-shadow: 0px 0px 20px #00000029;
-        text-align: center;
     }
 }

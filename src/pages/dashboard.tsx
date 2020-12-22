@@ -1,20 +1,22 @@
-import { Master, MainTemplate } from '@numly/components';
+import { Master, MainTemplate, Button } from '@numly/components';
 
 const Dashboard = () => {
   return (
-    <MainTemplate title="Welcome" variant="dashboard">
-        <div className="stat-container">
+    <MainTemplate title="Welcome" variant="dashboard-container">
+        <div className="stat-section">
             <div className="generate card">
-                <h3>Generated</h3>
+                <span className="card-title">Generated</span>
+                <span className="card-data">0</span>
             </div>
             <div className="last-used card">
-                <h3>Last Used</h3>
+                <span className="card-title">Last Used</span>
+                <span className="card-data">---</span>
             </div>
         </div>
-        <div className="fav-container">
-            <h3>Favorites</h3>
+        <div className="fav-section">
+            <h3 className="m-0">Favorites</h3>
             <p>You haven't added any yet, Click the button below to get started</p>
-            <button>Check History</button>
+            <Button variant="button" isLink={true} label="Check History" />
         </div>
     </MainTemplate>
   );
