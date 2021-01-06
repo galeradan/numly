@@ -1,13 +1,10 @@
-import {SideNav} from '@numly/components';
+import { SideNav } from '@numly/components';
 
 const Master = ({ children }) => {
-
-  const isActive = false;
-
   return (
     <>
       <div className="master">
-        <SideNav/>
+        <SideNav />
         <main className="main">{children}</main>
       </div>
     </>

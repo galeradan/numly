@@ -1,5 +1,5 @@
 // navigation
-export {default as SideNav} from './navigations/SideNav';
+export { default as SideNav } from './navigations/SideNav';
 
 // commons
 export { default as Button } from './commons/Button';
